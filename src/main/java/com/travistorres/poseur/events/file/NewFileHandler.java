@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package poseur.events.file;
+package com.travistorres.poseur.events.file;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import poseur.TheAnimatedPoseur;
-import poseur.io.FileManager;
+import com.travistorres.poseur.TheAnimatedPoseur;
+import com.travistorres.poseur.io.FileManager;
 
 /**
  * The <code>NewFileHandler</code> will make a request to create a new
@@ -15,7 +15,7 @@ import poseur.io.FileManager;
  * conflict with any other files, than a prompt will be called asking for the
  * size of the SpriteType object which will then be used to construct the first
  * <code>PoseCanvas</code> and <code>AnimationState</code> object.
- * 
+ *
  * @author      Travis Anthony Torres
  * @version     1.0     November 2012   Initial Release
  */
@@ -23,8 +23,8 @@ public class NewFileHandler implements ActionListener {
 
     /**
      * Calls the file manager framework to attempt to create a new file.
-     * 
-     * @param   e 
+     *
+     * @param   e
      *          The event that requested the SpriteType file.
      */
     @Override
@@ -32,9 +32,9 @@ public class NewFileHandler implements ActionListener {
         //  Acquire the file manager from the singleton object
         TheAnimatedPoseur singleton = TheAnimatedPoseur.getAnimatedPoseur();
         FileManager fm = singleton.getFileManager();
-        
+
         //  Attempt to make a new Sprite Type
         fm.requestNewSpriteType();
     }
-    
+
 }

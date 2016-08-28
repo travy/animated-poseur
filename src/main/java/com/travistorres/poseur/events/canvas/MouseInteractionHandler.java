@@ -2,24 +2,24 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package poseur.events.canvas;
+package com.travistorres.poseur.events.canvas;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import poseur.TheAnimatedPoseur;
-import poseur.states.StateManager;
+import com.travistorres.poseur.TheAnimatedPoseur;
+import com.travistorres.poseur.states.StateManager;
 
 /**
  * The <code>MouseInteractionHandler</code> class is responsible for responding
  * to the users mouse interactions on the rendering canvas.  This will enable
  * the application to select and move shapes around as well as construct new
  * shapes based on the applications current mode of operation.
- * 
+ *
  * @author      Travis Anthony Torres
  * @version     1.0     December 2012       Initial Release
  */
-public class MouseInteractionHandler 
+public class MouseInteractionHandler
         implements MouseListener, MouseMotionListener {
 
     /**
@@ -28,7 +28,7 @@ public class MouseInteractionHandler
      * the application:  sizing a shape or moving shape around canvas; the
      * task to be performed after dragging will be determined by the state
      * manager.
-     * 
+     *
      * @param   e
      *          The mouse dragged event.
      */
@@ -45,11 +45,11 @@ public class MouseInteractionHandler
      * actions that can transpire when this event is triggered:  a shape is
      * selected or a position has been selected to draw a shape at.  The action
      * that is to occur will be determined by the state manager.
-     * 
+     *
      * @param   e
      *          The event which contains information about the mouse button
      *          that was pressed.
-     * 
+     *
      */
     @Override
     public void mousePressed( MouseEvent e ) {
@@ -62,7 +62,7 @@ public class MouseInteractionHandler
      * Will be triggered whenever the user releases the left mouse button after
      * it has been pressed within the rendering canvas.  The action to be
      * performed is determined by the state manager.
-     * 
+     *
      * @param   e
      *          The event which contains information about the mouse button
      *          that was released.
@@ -73,11 +73,11 @@ public class MouseInteractionHandler
         StateManager sm = singleton.getStateManager();
         sm.processMouseReleased( e.getX(), e.getY() );
     }
-    
+
     /*
      * INTERACTIONS THAT ARE NOT DEFINED WITHIN THE APPLICATION
      */
-    
+
     @Override
     public void mouseMoved( MouseEvent e ) { /* INTENTIONALLY LEFT BLANK */ }
 
@@ -89,5 +89,5 @@ public class MouseInteractionHandler
 
     @Override
     public void mouseExited( MouseEvent e ) { /* INTENTIONALLY LEFT BLANK */ }
-    
+
 }

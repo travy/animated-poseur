@@ -1,4 +1,4 @@
-package poseur.gui;
+package com.travistorres.poseur.gui;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -11,7 +11,7 @@ import javax.swing.border.Border;
  * on color selection. The reason we don't just just JToggleButton is that
  * we want the color to show through even when the button is in the
  * selected state.
- * 
+ *
  * @author  Richard McKenna
  *          Debugging Enterprises
  * @version 1.0
@@ -27,16 +27,16 @@ public class ColorToggleButton extends JButton
      * Default constructor, by default it is not selected. The constructor
      * also sets up the border to use
      */
-    public ColorToggleButton() 
+    public ColorToggleButton()
     {
         selected = false;
         Border outline = BorderFactory.createLineBorder(Color.GRAY, 4);
         setBorder(outline);
     }
-    
+
     /**
      * Accessor method to check and see if this button is currently selected.
-     * 
+     *
      * @return true if this button is currently selected, false otherwise.
      */
     @Override
@@ -50,7 +50,7 @@ public class ColorToggleButton extends JButton
         selected = true;
         this.setBorderPainted(true);
     }
-    
+
     /**
      * Toggles this button as unselected.
      */

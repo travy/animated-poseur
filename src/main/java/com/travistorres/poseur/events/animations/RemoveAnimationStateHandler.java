@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package poseur.events.animations;
+package com.travistorres.poseur.events.animations;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import poseur.TheAnimatedPoseur;
-import poseur.states.StateManager;
+import com.travistorres.poseur.TheAnimatedPoseur;
+import com.travistorres.poseur.states.StateManager;
 
 /**
  * The class <code>RemoveAnimationStateHandler</code> will remove the currently
@@ -22,8 +22,8 @@ public class RemoveAnimationStateHandler implements ActionListener {
     /**
      * Will request that the currently selected animation state be removed from
      * memory.
-     * 
-     * @param   e 
+     *
+     * @param   e
      *          The event that requested the animation state be removed.
      */
     @Override
@@ -31,9 +31,9 @@ public class RemoveAnimationStateHandler implements ActionListener {
         //  Gets the state manager
         TheAnimatedPoseur singleton = TheAnimatedPoseur.getAnimatedPoseur();
         StateManager sm = singleton.getStateManager();
-        
+
         //  Removes the currently selected animation state
         sm.removeAnimationState();
     }
-    
+
 }

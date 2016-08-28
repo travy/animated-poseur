@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package poseur.events.colors;
+package com.travistorres.poseur.events.colors;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import poseur.TheAnimatedPoseur;
-import poseur.gui.UserInterface;
+import com.travistorres.poseur.TheAnimatedPoseur;
+import com.travistorres.poseur.gui.UserInterface;
 
 /**
  * The <code>BackgroundColorHanler</code> will be called whenever the user
@@ -21,7 +21,7 @@ public class BackgroundColorHandler implements ActionListener {
     /**
      * Communicates with th user interface so that it can request the
      * background color button be switched to the on position.
-     * 
+     *
      * @param   e
      *          The event that requested the background button be toggled to
      *          the on position.
@@ -31,9 +31,9 @@ public class BackgroundColorHandler implements ActionListener {
         //  Request communication with the user interface
         TheAnimatedPoseur singleton = TheAnimatedPoseur.getAnimatedPoseur();
         UserInterface gui = singleton.getGUI();
-        
+
         //  Toggles the background button to on
         gui.activateBackgroundToggleButton();;
     }
-    
+
 }
