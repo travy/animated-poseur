@@ -9,5 +9,10 @@ During the initial development of the application I had been using SVN since tha
 
 Over the past 2 years I have worked professionally as a PHP developer and wish to get back up to par with General-Purpose languages such as Java.  For this reason I have decided to continue the project and restore the final version in an open-source community mannor.  Having said such, I have looked through some of the source code and this was definately written back in my college days.  I've decided to house the current version in it's own container dubbed v1.0 and will continue to work on all future development in the v2.0-develop branch.  There is a lot of ground that will need to be covered including writing build task in Gradle, possibly upgrading to JavaFX and Unit Testing (Only heard of Unit Testing in passing in my school days lol)
 
-##  Legacy Version Installation
-The original version of the project was developed with Netbeans and does not have a modern build utility such as Gradle or even Ant.  The easiest way to run it is to install Netbeans and create a new project which uses the legacy source code and running there.  Gradle will be used in the v2.0 release of the project.
+##  Installation
+The Animated Poseur uses Gradle as it's build system.  In order to build the project and output a JAR file follow the following steps:
+
+1)  Install Gradle
+2)  CD into the project root directory
+3)  `gradle fatJar`
+4)  Run the jar file found in build/libs
