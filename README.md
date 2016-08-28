@@ -12,7 +12,7 @@ Over the past 2 years I have worked professionally as a PHP developer and wish t
 ##  Installation
 The Animated Poseur uses Gradle as it's build system.  In order to build the project and output a JAR file follow the following steps:
 
-1)  Install Gradle
-2)  CD into the project root directory
-3)  `gradle fatJar`
-4)  Run the jar file found in build/libs
+1.  Install Gradle
+2.  CD into the project root directory
+3.  `gradle fatJar`
+4.  Run the jar file found in build/libs
